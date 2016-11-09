@@ -39,31 +39,26 @@ class ApiGatewayShortcode extends Shortcode {
     $credential = json_decode(file_get_contents($gateway . '/v1/administrators/login', false, $context))->token;
 
     // Make call api
-    if ($method === 'GET') {
-      $headers = array('Content-type: application/x-www-form-urlencoded', 'Authorization: ' . $credential);
-      $opts = array(
-        'http' => array(
-          'method'  =>  $method,
-          'header'  =>  $headers
-        )
-      );
-      $context = stream_context_create($opts);
-      $result = json_decode(file_get_contents($gateway . $uri, false, $context));
+    $headers = array('Content-type: application/x-www-form-urlencoded', 'Authorization: ' . $credential);
+    $opts = array(
+      'http' => array(
+        'method'  =>  'GET',
+        'header'  =>  $headers
+      )
+    );
+    $context = stream_context_create($opts);
+    $result = json_decode(file_get_contents($gateway . $uri, false, $context));
 
-      return $result;
+    return $result;
 
-      // Return the twig
-      $template_html = 'partials/debug.html.twig';
-      $template_vars = [
-        'result'  => $result
-      ];
-      $output = $this->grav['twig']->twig()->render($template_html, $template_vars);
+    // Return the twig
+    $template_html = 'partials/debug.html.twig';
+    $template_vars = [
+      'result'  => $result
+    ];
+    $output = $this->grav['twig']->twig()->render($template_html, $template_vars);
 
-      return $output;
-    }
-
-    // Otherwise
-    return 'An error occured!';
+    return $output;
   }
 
 }
