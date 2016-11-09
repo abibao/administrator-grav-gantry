@@ -1,0 +1,3 @@
+enabled: true
+route: '/abibao/administrator'
+cache_enabled: false

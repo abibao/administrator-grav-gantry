@@ -1,0 +1,4 @@
+enabled: true
+uri: 'http://api.pprod.abibao.com'
+email: gilles@abibao.com
+password: azer1234

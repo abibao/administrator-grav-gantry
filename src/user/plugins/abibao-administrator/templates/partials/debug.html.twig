@@ -1,0 +1,15 @@
+{{ "### Compagnies"|markdown }}
+
+{% for entity in result %}
+  {% if entity.type=="company" %}
+    {{ "! #### #{entity.name}"|markdown }}
+    {{ "![#{entity.name}](https://api.abibao.com/administrator/#{entity.icon})"|markdown }}
+    {{ "#{entity.description}"|markdown }}
+  {% endif %}
+{% endfor %}
+
+{% for entity in result %}
+  {% if entity.type=="charity" %}
+    {{ "!!! #### #{entity.name}"|markdown }}
+  {% endif %}
+{% endfor %}
