@@ -16,15 +16,15 @@ class ApiGatewayShortcode extends Shortcode {
     $header = new \Grav\Common\Page\Header((array) $header);
 
     // Get params
-    $gateway = $this->config->get('plugins.abibao-api-gateway.uri');
+    $gateway = $this->config->get('plugins.abibao-administrator.uri');
     $uri = $sc->getParameter('uri', null);
     $template = $sc->getParameter('template', null);
 
     // Login as administrator
     $postdata = http_build_query(
       array(
-        'email' => $this->config->get('plugins.abibao-api-gateway.email'),
-        'password' => $this->config->get('plugins.abibao-api-gateway.password')
+        'email' => $this->config->get('plugins.abibao-administrator.email'),
+        'password' => $this->config->get('plugins.abibao-administrator.password')
       )
     );
     $headers = array('Content-type: application/x-www-form-urlencoded');

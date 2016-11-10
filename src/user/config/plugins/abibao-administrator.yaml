@@ -1,4 +1,6 @@
 enabled: true
-uri: 'http://api.pprod.abibao.com'
+route: /abibao/administrator
+cache_enabled: false
+uri: 'https://api.pprod.abibao.com'
 email: gilles@abibao.com
 password: azer1234

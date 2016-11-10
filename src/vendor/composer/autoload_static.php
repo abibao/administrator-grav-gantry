@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0
+class ComposerStaticInitaf5e45fee130ddff70444610e90b82fa
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -308,6 +308,7 @@ class ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0
         'Grav\\Common\\Errors\\Errors' => __DIR__ . '/../..' . '/system/src/Grav/Common/Errors/Errors.php',
         'Grav\\Common\\Errors\\SimplePageHandler' => __DIR__ . '/../..' . '/system/src/Grav/Common/Errors/SimplePageHandler.php',
         'Grav\\Common\\File\\CompiledFile' => __DIR__ . '/../..' . '/system/src/Grav/Common/File/CompiledFile.php',
+        'Grav\\Common\\File\\CompiledJsonFile' => __DIR__ . '/../..' . '/system/src/Grav/Common/File/CompiledJsonFile.php',
         'Grav\\Common\\File\\CompiledMarkdownFile' => __DIR__ . '/../..' . '/system/src/Grav/Common/File/CompiledMarkdownFile.php',
         'Grav\\Common\\File\\CompiledYamlFile' => __DIR__ . '/../..' . '/system/src/Grav/Common/File/CompiledYamlFile.php',
         'Grav\\Common\\Filesystem\\Folder' => __DIR__ . '/../..' . '/system/src/Grav/Common/Filesystem/Folder.php',
@@ -335,6 +336,7 @@ class ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0
         'Grav\\Common\\Getters' => __DIR__ . '/../..' . '/system/src/Grav/Common/Getters.php',
         'Grav\\Common\\Grav' => __DIR__ . '/../..' . '/system/src/Grav/Common/Grav.php',
         'Grav\\Common\\GravTrait' => __DIR__ . '/../..' . '/system/src/Grav/Common/GravTrait.php',
+        'Grav\\Common\\Helpers\\Base32' => __DIR__ . '/../..' . '/system/src/Grav/Common/Helpers/Base32.php',
         'Grav\\Common\\Helpers\\Excerpts' => __DIR__ . '/../..' . '/system/src/Grav/Common/Helpers/Excerpts.php',
         'Grav\\Common\\Helpers\\Truncator' => __DIR__ . '/../..' . '/system/src/Grav/Common/Helpers/Truncator.php',
         'Grav\\Common\\Inflector' => __DIR__ . '/../..' . '/system/src/Grav/Common/Inflector.php',
@@ -383,6 +385,7 @@ class ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0
         'Grav\\Common\\Service\\ConfigServiceProvider' => __DIR__ . '/../..' . '/system/src/Grav/Common/Service/ConfigServiceProvider.php',
         'Grav\\Common\\Service\\ErrorServiceProvider' => __DIR__ . '/../..' . '/system/src/Grav/Common/Service/ErrorServiceProvider.php',
         'Grav\\Common\\Service\\LoggerServiceProvider' => __DIR__ . '/../..' . '/system/src/Grav/Common/Service/LoggerServiceProvider.php',
+        'Grav\\Common\\Service\\MessagesServiceProvider' => __DIR__ . '/../..' . '/system/src/Grav/Common/Service/MessagesServiceProvider.php',
         'Grav\\Common\\Service\\OutputServiceProvider' => __DIR__ . '/../..' . '/system/src/Grav/Common/Service/OutputServiceProvider.php',
         'Grav\\Common\\Service\\PageServiceProvider' => __DIR__ . '/../..' . '/system/src/Grav/Common/Service/PageServiceProvider.php',
         'Grav\\Common\\Service\\StreamsServiceProvider' => __DIR__ . '/../..' . '/system/src/Grav/Common/Service/StreamsServiceProvider.php',
@@ -1023,11 +1026,11 @@ class ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit5e13fe9cf22c4dafc96ae3aa546169c0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitaf5e45fee130ddff70444610e90b82fa::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitaf5e45fee130ddff70444610e90b82fa::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitaf5e45fee130ddff70444610e90b82fa::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitaf5e45fee130ddff70444610e90b82fa::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitaf5e45fee130ddff70444610e90b82fa::$classMap;
 
         }, null, ClassLoader::class);
     }
