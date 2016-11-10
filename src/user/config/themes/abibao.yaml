@@ -1,0 +1,16 @@
+enabled: true
+dropdown:
+  enabled: true
+logo: abibao_logo.png
+contact:
+  name: 'Vincent Maréchal'
+  country: France
+  email: vincent@abibao.com
+social:
+  display: true
+display:
+  about: true
+  contact: true
+  openday: false
+infos:
+  display: false
