@@ -7,3 +7,5 @@ cache_enable: false
 ## Bienvenue aventurier
 
 [abibao-api-gateway uri=/v1/entities]
+
+

@@ -17,8 +17,8 @@ class ApiGatewayShortcode extends Shortcode {
 
     // Get params
     $gateway = $this->config->get('plugins.abibao-api-gateway.uri');
-    $uri = $sc->getParameter('uri', '/v1/alive');
-    $method = strtoupper($sc->getParameter('method', 'GET'));
+    $uri = $sc->getParameter('uri', null);
+    $template = $sc->getParameter('template', null);
 
     // Login as administrator
     $postdata = http_build_query(
@@ -49,10 +49,8 @@ class ApiGatewayShortcode extends Shortcode {
     $context = stream_context_create($opts);
     $result = json_decode(file_get_contents($gateway . $uri, false, $context));
 
-    return $result;
-
     // Return the twig
-    $template_html = 'partials/debug.html.twig';
+    $template_html = 'partials/' . $template . '.html.twig';
     $template_vars = [
       'result'  => $result
     ];

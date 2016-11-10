@@ -1,0 +1,15 @@
+{{ "! ### Associations"|markdown }}
+
+{% for entity in result %}
+  {% if entity.type=="charity" %}
+    {{ "##### #{entity.name}"|markdown }}
+    <table>
+      <tbody>
+        <tr>
+          <td width="180">{{ "![](https://api.pprod.abibao.com/administrator/#{entity.icon})"|markdown }}</td>
+          <td>{{ entity.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  {% endif %}
+{% endfor %}
