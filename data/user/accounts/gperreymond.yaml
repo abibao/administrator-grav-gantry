@@ -1,0 +1,11 @@
+email: gperreymond@gmail.com
+fullname: 'Gilles Perreymond'
+title: CTO
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$uAhpWGy3e9pIgUYLL6Vl3OVZGww281QJsXEkcpig7IryCt8jCDbZK

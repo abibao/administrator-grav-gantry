@@ -2,9 +2,19 @@ version: '2'
 services:
   web:
     build: .
+    image: abibao/grav:admin
     container_name: administrator-grav-gantry-apache
     privileged: true
     ports:
       - 8686:80
+    links:
+      - memcached:memcached
     volumes:
-      - ./src:/var/www/html
+      - ./data/user/accounts:/var/www/html/user/accounts
+      - ./data/user/pages:/var/www/html/user/pages
+      - ./data/user/themes/abibao:/var/www/html/user/themes/abibao
+  memcached:
+    image: memcached
+    container_name: administrator-grav-gantry-memcached
+    ports:
+      - 11211:11211
