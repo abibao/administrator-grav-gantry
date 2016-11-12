@@ -26,7 +26,7 @@ form:
   buttons:
     -
       type: submit
-      value: 'Inscrire'
+      value: "M’inscrire"
   process:
 ---
 ---

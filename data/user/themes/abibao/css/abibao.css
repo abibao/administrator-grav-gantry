@@ -1,36 +1,96 @@
 /**
-global
+fonts
 **/
 
-.button {
-  background: #5da3c7!important;
-  border-bottom: 2px solid #5da3c7!important;
-  border-radius: 0.5em;
-}
-input, .form-field * {
-  border: none!important;
-  background: none!important;
-}
-.form-field {
-  background: #ffffff!important;
-  border-bottom: 2px solid #5da3c7!important;
-  border-radius: 0.5em;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 
+h1, h2, h3, h4, h5, h6, p {
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+p {
+  font-size: 1.2em;
+}
 h1:after, h2:after, h3:after {
   background: #5da3c7!important;
 }
-footer .h3-like {
-  border-bottom: 1px solid #5da3c7!important;
+.features-item__title {
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 2.5em;
+  font-weight: 700;
+  font-style: normal;
+}
+.features-item__content {
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 1.15em;
+  font-weight: 300;
+  font-style: normal;
+  text-align: justify;
+}
+.features-item__icon, .features-item__title {
+  color: #5da3c7!important;
 }
 .features-item__icon > i {
   border: solid #5da3c7 4px;
   border-radius: 10em;
   padding: 0.3em;
 }
-.features-item__icon, .features-item__title {
-  color: #5da3c7!important;
+
+/**
+others
+**/
+
+.button {
+  background: #5da3c7!important;
+  border-bottom: 2px solid #5da3c7!important;
+  border-radius: 0.5em;
+  height: 55px;
 }
+.form-field {
+  background: #ffffff!important;
+  border: 2px solid #5da3c7!important;
+  border-radius: 0.5em;
+  margin: 0;
+  padding: 0;
+  height: 55px!important;
+}
+.form-field {
+  background: #ffffff!important;
+  border-radius: 0.5em;
+  margin: 0;
+  padding: 0;
+  height: 55px!important;
+}
+.form-input-wrapper {
+  margin: 0;
+  padding: 0;
+  height: 55px!important;
+}
+.form-input-wrapper input {
+  border: none!important;
+  background: none!important;
+  border-radius: 2em!important;
+  width: 80%!important;
+  height: 50px!important;
+  line-height: 50px!important;
+  margin: auto;
+  padding: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+footer .h3-like {
+  border-bottom: 1px solid #5da3c7!important;
+}
+
+/**
+abibao-static-bloc
+**/
 
 .abibao-static-bloc-blue {
   background: #5da3c7;
