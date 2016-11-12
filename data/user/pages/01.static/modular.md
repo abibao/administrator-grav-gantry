@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Static
 content:
   order:
     dir: asc
@@ -13,18 +13,20 @@ heading:
 form:
   title: home-contact
   name: form-contact
-  action: /home
+  action: http://dashboard.abibao.com/register
+  method: get
   fields:
     -
-      name: email
+      name: registermail
       label: Email
-      placeholder: 'Enter your email'
+      placeholder: 'Mon email'
       type: email
       validate:
         required: true
   buttons:
     -
       type: submit
-      value: 'Subscribe Now'
+      value: 'Inscrire'
   process:
+---
 ---

@@ -1,6 +1,8 @@
-<section {{ page.header.bgcolor? '': 'class="bg-gray"'}}>
+{% set sectionclass = page.header.bgcolor ? '': 'bg-gray' %}
+
+<section class="{{ page.header.customclass ? page.header.customclass : sectionclass }}">
   <div class="container page-custom">
-  <h1>{{page.header.title}}</h1>
-  {{ content }}
-</div>	
+    <h1>{{ page.header.title }}</h1>
+    {{ content }}
+  </div>
 </section>

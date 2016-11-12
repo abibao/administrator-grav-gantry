@@ -32,3 +32,6 @@ form:
                 0: Gray
               validate:
                 type: bool
+            header.customclass:
+              type: text
+              label: Custom bloc class

@@ -1,0 +1,64 @@
+title: Showcase-youtube
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    name:
+                      default: modular/showcase-youtube
+                      '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+            overrides:
+              fields:
+                header.template:
+                  default: modular/showcase-youtube
+                  '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+        custom:
+          type: tab
+          title: Custom
+          fields:
+
+            header.bgcolor:
+              type: toggle
+              label: Background color
+              highlight: 1
+              default: 1
+              options:
+                1: White
+                0: Gray
+              validate:
+                type: bool
+            header.text.heading_display:
+              type: toggle
+              label: Display title & text
+              highlight: 0
+              default: 0
+              options:
+                1: 'Yes'
+                0: 'No'
+              validate:
+                type: bool
+            header.text.title:
+              type: text
+              label: Title if different (optional)
+              help: If different from content title
+
+            spacer0:
+              type: spacer
+              title: 'Add specific images'
+              underline: true
+
+            header.images.background:
+              label: Choose a background image
+              type: pagemediaselect
+              help: Please upload from the first modular page.
+            header.images.thumb:
+              label: Choose a thumb for youtube video
+              type: pagemediaselect
+              help: Please upload from the first modular page.

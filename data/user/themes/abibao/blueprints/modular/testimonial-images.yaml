@@ -1,0 +1,147 @@
+title: testimonial
+'@extends': default
+form:
+  fields:
+    tabs:
+      fields:
+        custom:
+          type: tab
+          title: Custom
+          fields:
+            header.bgcolor:
+              type: toggle
+              label: Background color
+              highlight: 1
+              default: 1
+              options:
+                1: White
+                0: Gray
+              validate:
+                type: bool
+            header.text.heading_display:
+              type: toggle
+              label: Display title & text
+              highlight: 0
+              default: 0
+              options:
+                1: 'Yes'
+                0: 'No'
+              validate:
+                type: bool
+            header.text.title:
+              type: text
+              label: Title if different (optional)
+              help: If different from content title
+            header.text.resume:
+              type: textarea
+              label: Some text (optional)
+              help: Markdown possible
+            header.text.text_center:
+              type: toggle
+              label: Title & text position
+              highlight: 0
+              default: 0
+              options:
+                0: 'Left'
+                1: 'Center'
+              validate:
+                type: bool
+            spacer1:
+              type: spacer
+              title: Content
+              underline: true
+            header.type:
+              type: toggle
+              label: Layout type
+              highlight: 1
+              default: 1
+              options:
+                1: slider
+                0: 'full page'
+              validate:
+                type: bool
+            header.list:
+              type: list
+              label: Add a testimonial
+              fields:
+                .picture:
+                  label: Choose an image
+                  type: pagemediaselect
+                  help: Please upload from the first modular page.
+        settings:
+          type: tab
+          title: Settings slider
+          fields:
+
+            header.ls.item:
+              type: text
+              size: x-small
+              label: Item
+              default: 1
+              help: The number of slides to show at a time
+
+            header.ls.loop:
+              type: toggle
+              label: Loop
+              highlight: true
+              default: 'false'
+              options:
+                'true': Enabled
+                'false': Disabled
+              help: Sets whether or not to loop the slides or stop at the last slide
+
+            header.ls.slideMove:
+              type: text
+              size: x-small
+              label: Slide Move
+              default: 1
+              help: This option sets the number of slides moved at a time. The default setting is `1`
+
+            header.ls.auto:
+              type: toggle
+              label: Auto
+              highlight: true
+              default: 'true'
+              options:
+                'true': Enabled
+                'false': Disabled
+              help: Sets whether or not automatic transitions is enabled
+
+            header.ls.pause:
+              type: text
+              size: x-small
+              label: Pause
+              default: 5000
+              help: Sets the time (in milliseconds) between automatic transitions
+
+            header.ls.pauseOnHover:
+              type: toggle
+              label: Pause on Hover
+              highlight: true
+              default: 'false'
+              options:
+                'true': Enabled
+                'false': Disabled
+              help: Sets whether or not it should pause the transitions on hover
+
+            header.ls.speed:
+              type: text
+              size: x-small
+              label: Speed
+              default: 1000
+              help: Sets the time (in milliseconds) of the transition between slides
+
+            header.ls.pager:
+              type: toggle
+              label: Pager
+              highlight: true
+              default: 'true'
+              options:
+                'true': Enabled
+                'false': Disabled
+              help: Toggles the pagination that appears along with the lightSlider
+
+            display1:
+              type: display
+              label: Info
+              content: Number of items on mobile  and tablet screen = 1

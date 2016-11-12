@@ -1,0 +1,12 @@
+<section class="showcase-youtube-section" style="background-image: url('{{ page.url }}/{{page.header.images.background }}');">
+  <div class="showcase-youtube-veil">
+    {% if page.header.text %}
+      <h1 class="showcase-youtube-text">{{ page.header.text.title }}</h1>
+    {% endif %}
+    {% if page.header.images.thumb %}
+      <div class="showcase-youtube-thumb-container">
+        <img class="showcase-youtube-thumb" src="{{ page.url }}/{{ page.header.images.thumb }}">
+      </div>
+    {% endif %}
+  </div>
+</section>
