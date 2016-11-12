@@ -1,5 +1,7 @@
 FROM php:5-apache
 
+VOLUME /var/www/html
+
 RUN a2enmod rewrite
 
 RUN apt-get update && apt-get install -y \
@@ -23,16 +25,19 @@ RUN apt-get update \
 RUN apt-get update \
     && apt-get install -y unzip
 
-USER www-data
-
-WORKDIR /var/www/html
+RUN mkdir /usr/src/grav-data \
+    && chown -R www-data:www-data /usr/src/grav-data
+ADD ./data /usr/src/grav-data
 
 COPY grav-admin-v1.1.8.zip .
+RUN unzip -d /usr/src grav-admin-v1.1.8.zip \
+    && rm grav-admin-v1.1.8.zip \
+    && chown -R www-data:www-data /usr/src/grav-admin
 
-RUN unzip -d /tmp grav-admin-v1.1.8.zip \
-    && mv /tmp/grav-admin/* /var/www/html \
-    && rm -rf /tmp/grav-admin \
-    && rm -rf grav-admin-v1.1.8.zip \
-    && cp /var/www/html/webserver-configs/htaccess.txt /var/www/html/.htaccess
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
 
-RUN bin/gpm selfupgrade -f
+ENTRYPOINT ["docker-entrypoint.sh"]
+WORKDIR /var/www/html
+
+CMD ["apache2-foreground"]

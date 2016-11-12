@@ -10,9 +10,7 @@ services:
     links:
       - memcached:memcached
     volumes:
-      - ./data/user/accounts:/var/www/html/user/accounts
-      - ./data/user/pages:/var/www/html/user/pages
-      - ./data/user/themes/abibao:/var/www/html/user/themes/abibao
+      - ./html:/var/www/html
   memcached:
     image: memcached
     container_name: administrator-grav-gantry-memcached
